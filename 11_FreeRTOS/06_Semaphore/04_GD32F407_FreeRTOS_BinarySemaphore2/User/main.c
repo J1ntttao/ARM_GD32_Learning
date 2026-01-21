@@ -55,8 +55,10 @@ void vTaskOLED(){
         printf("taskOLED waiting...\n");
         // 阻塞等待，直到获取到信号（一直等）
         xReturn = xSemaphoreTake(xSemaphore, pdMS_TO_TICKS(1000)); //portMAX_DELAY, portMAX_DELAY
+        
         sprintf(buff,"%d",++cnt);
         OLED_ShowString(0,0,buff,16,0);
+        
         OLED_Refresh();
         vTaskDelay(pdMS_TO_TICKS(500));
     }

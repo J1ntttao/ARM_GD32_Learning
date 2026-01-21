@@ -19,3 +19,4 @@ Listings/
 .cmsis/
 .pack/
 *.uvguix.*
+*.exe
